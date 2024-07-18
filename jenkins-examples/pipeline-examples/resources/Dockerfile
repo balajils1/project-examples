@@ -1,10 +1,12 @@
-FROM debian:sid
-ADD rootfs.tar.xz /
-RUN apt-get update
-RUN apt-get -y install tzdata
-RUN  apt-get install -y erlang-base \
-                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-                        erlang-runtime-tools erlang-snmp erlang-ssl \
-                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
-CMD ["bash"]
+FROM node:10
+
+RUN mkdir /usr/src/goof
+RUN mkdir /tmp/extracted_files
+COPY . /usr/src/goof
+WORKDIR /usr/src/goof
+
+RUN npm update
+RUN npm install
+EXPOSE 3001
+EXPOSE 9229
+ENTRYPOINT ["npm", "start"]
