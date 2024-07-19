@@ -148,7 +148,7 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 # CVE-2015-3227,CVE-2015-3226
 #
-COPY utils.js /tmp/utils.js
+#COPY utils.js /tmp/utils.js
 # nodejs - Javascript (installed manually)
 #
 # https://www.cvedetails.com/vulnerability-list/vendor_id-12113/product_id-30764/version_id-192848/Nodejs-Node.js-0.10.41.html
