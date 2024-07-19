@@ -182,9 +182,9 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 RUN touch /var/lib/rpm/* && \
     yum -y install rpm-build redhat-rpm-config rpmdevtools
-COPY rpmsquirt.sh /rpmsquirt.sh
-COPY rpmsquirt.dat /
-RUN /rpmsquirt.sh 
+#COPY rpmsquirt.sh /rpmsquirt.sh
+#COPY rpmsquirt.dat /
+##RUN /rpmsquirt.sh 
 
 # Precautionary failure with messages
 #
