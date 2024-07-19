@@ -46,7 +46,7 @@ ARG CURL_OPTIONS=""
 #
 # https://www.cvedetails.com/cve/CVE-2015-1038/
 #
-RUN curl -LO ${CURL_OPTIONS} \
+RUN curl -LKO ${CURL_OPTIONS} \
       https://sourceforge.net/projects/p7zip/files/p7zip/9.20.1/p7zip_9.20.1_src_all.tar.bz2 && \
     bzcat p7zip_9.20.1_src_all.tar.bz2 | tar x && \
     cd p7zip_9.20.1 && \
