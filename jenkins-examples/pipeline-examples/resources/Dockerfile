@@ -14,33 +14,33 @@ ARG CURL_OPTIONS=""
 
 # Install build utils
 #
-RUN touch /var/lib/rpm/* && \
-    yum -y install bison gnutls-devel gcc libidn-devel gcc-c++ bzip2 && \
-    yum clean all
+#RUN touch /var/lib/rpm/* && \
+    #yum -y install bison gnutls-devel gcc libidn-devel gcc-c++ bzip2 && \
+   # yum clean all
 
 # wget - command line utility (installed via. RPM)
 #
 # https://www.cvedetails.com/cve/CVE-2014-4877/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://vault.centos.org/7.0.1406/os/x86_64/Packages/wget-1.14-10.el7.x86_64.rpm && \
-    yum -y install wget-1.14-10.el7.x86_64.rpm && \
-    rm *.rpm
+#RUN curl -LO ${CURL_OPTIONS} \
+    #  http://vault.centos.org/7.0.1406/os/x86_64/Packages/wget-1.14-10.el7.x86_64.rpm && \
+   # yum -y install wget-1.14-10.el7.x86_64.rpm && \
+    #rm *.rpm
 
 # wget - command line utility (manual install)
 #
 # https://www.cvedetails.com/cve/CVE-2014-4877/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/wget/wget-1.15.tar.gz && \
-    tar zxf wget-1.15.tar.gz && \
-    cd wget-1.15 && \
-    ./configure --prefix=/opt/wget && \
-    make && \
-    make install && \
-    cd .. && \
-    rm -rf wget-1.15 && \
-    rm *.tar.gz
+#RUN curl -LO ${CURL_OPTIONS} \
+    #  http://www.mirrorservice.org/sites/ftp.gnu.org/gnu/wget/wget-1.15.tar.gz && \
+  #  tar zxf wget-1.15.tar.gz && \
+   # cd wget-1.15 && \
+ #   ./configure --prefix=/opt/wget && \
+ #   make && \
+ #   make install && \
+ #   cd .. && \
+ #   rm -rf wget-1.15 && \
+  #  rm *.tar.gz
 
 # p7zip - command line utility (manual install)
 #
