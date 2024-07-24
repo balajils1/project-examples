@@ -5,4 +5,4 @@ RUN mkdir /tmp/extracted_files
 COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 EXPOSE 3001
-EXPOSE 9229
+
