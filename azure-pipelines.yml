@@ -10,13 +10,33 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: JFrogMaven@1
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
+    mavenPomFile: 'maven-examples/maven-example/pom.xml'
+    goals: 'install'
+    artifactoryResolverService: 'demo'
+    targetResolveReleaseRepo: 'demo-libs-release'
+    targetResolveSnapshotRepo: 'demo-libs-snapshot'
+    artifactoryDeployService: 'demo'
+    targetDeployReleaseRepo: 'demo-libs-release'
+    targetDeploySnapshotRepo: 'demo-libs-snapshot'
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+  
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'demo'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    projectKey: 'umac-project'
+    
+- task: JFrogBuildScan@1
+  inputs:
+    xrayConnection: 'demo-xray'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    projectKey: 'umac-project'
+    allowFailBuild: true
+    vuln: true
