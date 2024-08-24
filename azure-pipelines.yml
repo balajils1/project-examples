@@ -6,13 +6,14 @@
 trigger:
 - master
 
+
 pool:
   vmImage: ubuntu-latest
 
 steps:
 - task: JFrogMaven@1
   inputs:
-    mavenPomFile: 'maven-examples/pom.xml'
+    mavenPomFile: '$(GithubRepoName)/maven-examples/pom.xml'
     goals: 'clean deploy'
     artifactoryResolverService: 'demo'
     targetResolveReleaseRepo: 'demo-libs-release'
