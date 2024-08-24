@@ -25,12 +25,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     javaHomeOption: 'JDKVersion'
   
-- task: JFrogPublishBuildInfo@1
-  inputs:
-    artifactoryConnection: 'demo'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'umac-project'
     
 - task: JFrogBuildScan@1
   inputs:
