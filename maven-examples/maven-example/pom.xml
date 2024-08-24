@@ -27,6 +27,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+    <groupId>com.datastax.cassandra</groupId>
+    <artifactId>cassandra-driver-extras</artifactId>
+    <version>3.11.0</version>
+</dependency>
     </dependencies>
 
     <build>
