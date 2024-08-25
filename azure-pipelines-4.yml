@@ -30,3 +30,11 @@ steps:
     artifactoryConnection: 'demo'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+
+- task: JFrogBuildScan@1
+  inputs:
+    xrayConnection: 'demo-xray'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    allowFailBuild: true
+    vuln: true
