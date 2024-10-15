@@ -24,12 +24,16 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     javaHomeOption: 'JDKVersion'
+    includeEnvVars: true
+    projectKey: 'devops'
+
 
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'demo'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    projectKey: 'devops'
 
 - task: JFrogBuildScan@1
   inputs:
@@ -38,3 +42,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
     vuln: true
+    projectKey: 'devops'
+
+    
