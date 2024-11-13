@@ -31,7 +31,7 @@ stages:
       inputs:
               command: 'Scan'
               xrayConnection: 'demo-xray'
-              imageName: 'test'
+              imageName: 'alpine'
               watchesSource: 'project'
               project: 'umac-project'
               allowFailBuild: true
