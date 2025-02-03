@@ -57,23 +57,18 @@
 <dependency>
     <groupId>junit</groupId>
     <artifactId>junit</artifactId>
-    <version>4.9</version>
+    <version>4.13-rc-2</version>
     <scope>test</scope>
 </dependency>
 <dependency>
     <groupId>com.google.guava</groupId>
     <artifactId>guava</artifactId>
-    <version>29.0-jre</version>
+    <version>31.1-jre</version>
 </dependency>
 <dependency>
 <groupId>com.datastax.cassandra</groupId>
     <artifactId>cassandra-driver-extras</artifactId>
     <version>3.11.0</version>
-</dependency>
-<dependency>
-    <groupId>org.yaml</groupId>
-    <artifactId>snakeyaml</artifactId>
-    <version>1.33</version>
 </dependency>
     </dependencies>
 </project>
