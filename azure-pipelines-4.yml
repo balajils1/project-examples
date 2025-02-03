@@ -15,17 +15,17 @@ steps:
     mavenPomFile: 'maven-examples/pom.xml'
     goals: 'deploy'
     artifactoryResolverService: 'demo'
-    targetResolveReleaseRepo: 'devops-libs-release'
-    targetResolveSnapshotRepo: 'devops-libs-snapshot'
+    targetResolveReleaseRepo: 'team1-libs-release'
+    targetResolveSnapshotRepo: 'team1-libs-snapshot'
     artifactoryDeployService: 'demo'
-    targetDeployReleaseRepo: 'devops-libs-release-local'
-    targetDeploySnapshotRepo: 'devops-libs-snapshot-local'
+    targetDeployReleaseRepo: 'team1-libs-release-local'
+    targetDeploySnapshotRepo: 'team1-libs-snapshot-local'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     javaHomeOption: 'JDKVersion'
     includeEnvVars: true
-    projectKey: 'devops'
+    projectKey: 'alpha'
 
 
 - task: JFrogPublishBuildInfo@1
@@ -42,6 +42,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
     vuln: true
-    projectKey: 'devops'
+    projectKey: 'alpha'
 
     
