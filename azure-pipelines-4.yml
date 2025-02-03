@@ -33,7 +33,7 @@ steps:
     artifactoryConnection: 'demo'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'devops'
+    projectKey: 'alpha'
 
 - task: JFrogBuildScan@1
   inputs:
