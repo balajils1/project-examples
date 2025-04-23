@@ -66,6 +66,11 @@
     <version>31.1-jre</version>
 </dependency>
 <dependency>
+    <groupId>com.guavaapps.components</groupId>
+    <artifactId>components</artifactId>
+    <version>1.0.0-alpha09</version>
+</dependency>       
+<dependency>
 <groupId>com.datastax.cassandra</groupId>
     <artifactId>cassandra-driver-extras</artifactId>
     <version>3.11.0</version>
