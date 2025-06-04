@@ -34,7 +34,9 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
    
-
+- task: CmdLine@2
+  inputs:
+    script: 'sleep 45s'
 
 - task: JFrogBuildScan@1
   inputs:
