@@ -33,6 +33,8 @@ steps:
     artifactoryConnection: 'demo'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    projectKey: 'alpha'
+
    
 - task: CmdLine@2
   inputs:
@@ -45,6 +47,7 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
     vuln: true
+    projectKey: 'alpha'
   
 
     
