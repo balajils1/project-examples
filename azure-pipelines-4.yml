@@ -33,7 +33,7 @@ steps:
     artifactoryConnection: 'demo'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'alpha'
+   
 
 
 - task: JFrogBuildScan@1
@@ -43,6 +43,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
     vuln: true
-    projectKey: 'alpha'
+  
 
     
