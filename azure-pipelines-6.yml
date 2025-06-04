@@ -32,9 +32,7 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     projectKey: 'alpha'
-- task: Delay@1
-  inputs:
-    delayForMinutes: '1'
+    
 - task: JFrogBuildScan@1
   inputs:
     xrayConnection: 'demo-xray'
