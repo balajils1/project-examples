@@ -35,6 +35,7 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     projectKey: 'alpha'
 
+
 - task: JFrogBuildScan@1
   inputs:
     xrayConnection: 'demo-xray'
