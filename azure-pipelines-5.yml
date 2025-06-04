@@ -33,7 +33,7 @@ stages:
               xrayConnection: 'demo-xray'
               imageName: 'alpine'
               watchesSource: 'project'
-              project: 'umac-project'
+              project: 'alpha'
               allowFailBuild: true
               allowBypassArchiveLimits: false
               threads: '3'
