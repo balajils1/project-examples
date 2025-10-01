@@ -77,9 +77,9 @@
 </dependency>
 		<!-- https://mvnrepository.com/artifact/com.github.codingandcoding/maven-compiler-plugin -->
 <dependency>
-    <groupId>com.github.codingandcoding</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.9.0</version>
+    <groupId>org.jusecase</groupId>
+    <artifactId>jte-maven-compiler-plugin</artifactId>
+    <version>0.6.0</version>
 </dependency>
     </dependencies>
 </project>
