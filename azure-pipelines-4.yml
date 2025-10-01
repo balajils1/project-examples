@@ -10,13 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JFrogAudit@1
-  inputs:
-    xrayConnection: 'demo-xray'
-    workingDirectory: 'maven-examples/pom.xml'
-    watchesSource: 'watches'
-    watches: 'git'
-    allowFailBuild: true
     
 - task: JFrogMaven@1
   inputs:
@@ -34,6 +27,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     includeEnvVars: true
     projectKey: 'alpha'
+
 
 
 - task: JFrogPublishBuildInfo@1
