@@ -13,6 +13,7 @@ steps:
 - task: JFrogAudit@1
   inputs:
     xrayConnection: 'demo-xray'
+    workingDirectory: 'maven-examples/pom.xml'
     watchesSource: 'watches'
     watches: 'git'
     allowFailBuild: true
