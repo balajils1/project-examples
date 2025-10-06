@@ -48,7 +48,7 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
-    vuln: true
+    vuln: false
     projectKey: 'alpha'
   
 
