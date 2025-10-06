@@ -13,13 +13,14 @@ steps:
 - task: JFrogAudit@1
   inputs:
     xrayConnection: 'demo-xray'
+    workingDirectory: 'ctest'
     watchesSource: 'project'
     project: 'alpha'
     allowFailBuild: true
 
 - task: JFrogMaven@1
   inputs:
-    mavenPomFile: 'maven-examples/pom.xml'
+    mavenPomFile: 'ctest/pom.xml'
     goals: 'deploy'
     artifactoryResolverService: 'demo'
     targetResolveReleaseRepo: 'alpha-mvn-blr-libs-release'
