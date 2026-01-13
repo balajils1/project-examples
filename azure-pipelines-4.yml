@@ -10,13 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: JFrogAudit@1
-  inputs:
-    xrayConnection: 'demo-xray'
-    workingDirectory: 'Ctest'
-    watchesSource: 'project'
-    project: 'alpha'
-    allowFailBuild: true
 
 - task: JFrogMaven@1
   inputs:
