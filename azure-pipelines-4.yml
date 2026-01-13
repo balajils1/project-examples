@@ -43,6 +43,7 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     projectKey: 'alpha'
+    
 
    
 - task: CmdLine@2
@@ -55,7 +56,7 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
-    vuln: false
+    vuln: true
     projectKey: 'alpha'
   
 
