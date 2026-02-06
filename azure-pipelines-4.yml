@@ -13,7 +13,7 @@ steps:
 
 - task: JFrogMaven@1
   inputs:
-    mavenPomFile: 'Ctest/pom.xml'
+    mavenPomFile: 'maven-examples/pom.xml'
     goals: 'deploy'
     artifactoryResolverService: 'demo'
     targetResolveReleaseRepo: 'alpha-mvn-blr-libs-release'
