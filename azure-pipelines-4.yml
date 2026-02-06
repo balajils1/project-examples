@@ -19,7 +19,7 @@ steps:
     targetResolveReleaseRepo: 'alpha-mvn-blr-libs-release'
     targetResolveSnapshotRepo: 'alpha-mvn-blr-libs-snapshot'
     artifactoryDeployService: 'demo'
-    targetDeployReleaseRepo: 'alpha-mvn-blr-libs-release-local'
+    targetDeployReleaseRepo: 'alpha-mvn-blr-libs-release-loca'
     targetDeploySnapshotRepo: 'alpha-mvn-blr-libs-snapshot'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
